@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="col-md-6">
+    <form [formGroup]="regForm" (ngSubmit)="reg()">
+    <div class="form-group">
+      <label for="exampleInputUser1">User Id</label>
+      <input type="user" class="form-control" id="exampleInputUser1" aria-describedby="userHelp" formControlName="user">
+      <span style="color: red;" *ngIf="user.invalid && user.touched">please enter Email</span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp" formControlName="userpass">
+      <span style="color: red;" *ngIf="userpass.invalid && userpass.touched">please enter password</span>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+    </div>
+</div>
